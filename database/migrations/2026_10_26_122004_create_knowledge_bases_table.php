@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('knowledge_bases', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('original_filename');
+            $table->string('file_path');
+            $table->enum('status',['pending','generating','completed','failed'])->default('pending');
             $table->timestamps();
         });
     }
