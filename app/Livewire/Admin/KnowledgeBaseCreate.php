@@ -15,7 +15,7 @@ class KnowledgeBaseCreate extends Component
 
     public string $title = '';
 
-    public $documentFile;
+    public  $documentFile;
 
     protected $rules = [
         'title' => 'required|string|max:255',

@@ -1,36 +1,33 @@
 <div>
     <div class="mb-8">
-        <a href="{{ route('knowledge-bases.index') }}" class="text-sm
-text-gray-500 hover:text-gray-700">
+        <a href="{{ route('knowledge-bases.index') }}" class="text-sm text-gray-500 hover:text-gray-700">
             ← Back to Knowledge Base
         </a>
-        <h1 class="text-2xl font-bold tracking-tight mt-2">Upload New
-            Document</h1>
+        <h1 class="text-2xl font-bold tracking-tight mt-2 text-gray-900 dark:text-white">Upload New Document</h1>
     </div>
-    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bgwhite dark:bg-gray-900 p-8 max-w-lg">
+
+    <div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-8 max-w-lg">
         <form wire:submit="save" class="space-y-6">
             <div>
-                <label class="block text-sm font-medium mb1">Title</label>
-                <input wire:model="title" type="text" placeholder="e.g.
-Company Policy 2025" class="w-full rounded-lg border border-gray-300
-dark:border-gray-700 bg-transparent px-4 py-2 text-sm focus:outline-none
-focus:ring-2 focus:ring-violet-500" />
-                @error('title') <p class="text-red-500 text-xs mt-1">{{
-                    $message }}</p> @enderror
+                <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Title</label>
+                <input wire:model="title" type="text" placeholder="e.g. Company Policy 2025"
+                    class="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-transparent px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-violet-500 text-gray-900 dark:text-white" />
+                @error('title') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
             </div>
 
             <div>
-                <label class="block text-sm font-medium mb-1">Document
-                    (PDF or TXT, max 10MB)</label>
+                <label class="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">Document (PDF or TXT, max
+                    10MB)</label>
                 <input wire:model="documentFile" type="file" accept=".pdf,.txt"
-                    class="w-full text-sm text-gray-500 file:mr-4 file:py2 file:px-4 file:rounded-lg file:border-0 file:bg-violet-50 file:textviolet-700 hover:file:bg-violet-100" />
-                @error('documentFile') <p class="text-red-500 text-xs mt1">{{ $message }}</p> @enderror
+                    class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100 dark:file:bg-violet-900 dark:file:text-violet-200" />
+                @error('documentFile') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
             </div>
-            <button type="submit" class="w-full rounded-lg bg-gray-900 dark:bg-white px-4
-py-2 text-sm font-medium text-white dark:text-gray-900 hover:bg-gray-700
-transition-colors">
+
+            <button type="submit"
+                class="w-full rounded-lg bg-gray-900 dark:bg-white px-4 py-2 text-sm font-medium text-white dark:text-gray-900 hover:bg-gray-700 dark:hover:bg-gray-100 transition-colors">
                 <span wire:loading.remove>Upload & Index</span>
                 <span wire:loading>Uploading...</span>
             </button>
         </form>
-        </di
+    </div>
+</div>
