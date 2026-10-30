@@ -20,7 +20,7 @@ class KnowledgeBaseAdmin extends Component
     {
         return view('livewire.admin.knowledge-base-admin',
         [
-            'knowledgeBases' => KnowledgeBase::query()->latest()->get(),
+            'knowledgeBases' => KnowledgeBase::query()->withCount('chunks')->latest()->get(),
         ]);
     }
 }

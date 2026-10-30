@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('original_filename');
             $table->string('file_path');
             $table->enum('status',['pending','generating','completed','failed'])->default('pending');
+            $table->text('error_message')->nullable();
             $table->timestamps();
         });
     }

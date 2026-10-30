@@ -76,7 +76,7 @@
                             class="inline-flex items-center gap-1.5 rounded-full bg-gray-100 dark:bg-gray-800 px-2 py-1 text-xs font-medium text-gray-600 dark:text-gray-400">Pending</span>
                         @endif
                     </td>
-                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">{{ $kb->chunks_count ?? '—' }}</td>
+                    <td class="px-6 py-4 text-sm text-gray-500 dark:text-gray-400">{{ $kb->chunks_count}}</td>
                     <td class="px-6 py-4 text-right">
                         <button wire:click="delete({{ $kb->id }})"
                             wire:confirm="Are you sure you want to delete this document?"
